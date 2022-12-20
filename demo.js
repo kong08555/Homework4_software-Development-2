@@ -2,18 +2,18 @@ const express = require("express")
 const app =  express()
 const work1 = require('./Models/work1')
 app.get('/',(req, res) => {
-    res.send("Red devil army")
+    res.send("website can work")
 })
 
 app.get('/about', (req,res) => {
-    res.send("glory glory man U nited")
+    res.send("other website can work")
 })
 
 
 app.get("*", (req, res) =>{
-    res.send("Error: 404 page Not found ")
+    res.sendFile(__dirname + '/public/error.html')
 })
 
-app.listen(3000, () => {
-    console.log("start Server at port [3000")
+app.listen(3001, () => {
+    console.log("start Server at port [3001]")
 })
