@@ -9,6 +9,9 @@ app.get('/about', (req,res) => {
     res.send("other website can work")
 })
 
+app.get('/style.css',(req,res) =>{
+    res.sendFile(__dirname+"/public/style.css")
+})
 
 app.get("*", (req, res) =>{
     res.sendFile(__dirname + '/public/error.html')
